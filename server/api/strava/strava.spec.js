@@ -4,11 +4,11 @@ var should = require('should');
 var app = require('../../app');
 var request = require('supertest');
 
-describe.only('GET /api/strava', function() {
+describe('GET /api/strava/xxx', function() {
 
   it('should respond with an Object', function(done) {
     request(app)
-      .get('/api/strava')
+      .get('/api/strava/xxx')
       .expect(200)
       .expect('Content-Type', /json/)
       .end(function(err, res) {

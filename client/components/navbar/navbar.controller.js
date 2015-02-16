@@ -3,9 +3,14 @@
 angular.module('stravamapsApp')
   .controller('NavbarCtrl', function ($scope, $location, Auth) {
     $scope.menu = [{
-      'title': 'Home',
-      'link': '/'
-    }];
+        title: 'Home',
+        link: '/'
+      },
+      {
+        title: 'Activties',
+        link: '/activities'
+      }
+    ];
 
     $scope.isCollapsed = true;
     $scope.isLoggedIn = Auth.isLoggedIn;

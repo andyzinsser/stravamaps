@@ -14,7 +14,7 @@ exports.index = function(req, res) {
   }
 
   request.post({url:'https://www.strava.com/oauth/token', form:postData, json:true}, function (error, response, body) {
-    if (!error && response.statusCode == 200) {
+    if (!error && response.statusCode === 200) {
       res.redirect('/activities/' + response.body.access_token);
     } else {
       console.log("Token Retrieval Error:");

@@ -51,16 +51,16 @@ angular.module('stravamapsApp')
       });
 
       function includePointInBounds( bounds, point ) {
-        if ( point.longitude > bounds.north || bounds.north == 0 ) {
+        if ( point.longitude > bounds.north || bounds.north === 0 ) {
           bounds.north = point.longitude;
         }
-        if ( point.longitude < bounds.south || bounds.south == 0 ) {
+        if ( point.longitude < bounds.south || bounds.south === 0 ) {
           bounds.south = point.longitude;
         }
-        if ( point.latitude > bounds.east || bounds.east == 0) {
+        if ( point.latitude > bounds.east || bounds.east === 0) {
           bounds.east = point.latitude;
         }
-        if ( point.latitude < bounds.west || bounds.west == 0 ) {
+        if ( point.latitude < bounds.west || bounds.west === 0 ) {
           bounds.west = point.latitude;
         }
         return bounds;

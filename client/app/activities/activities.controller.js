@@ -15,6 +15,7 @@ angular.module('stravamapsApp')
         };
 
         activities.forEach( function( activity, idx ) {
+          /*jshint camelcase: false */
           var points = maps.geometry.encoding.decodePath( activity.map.summary_polyline ),
               serializedPoints = [];
 

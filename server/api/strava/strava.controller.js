@@ -5,7 +5,7 @@ var _ = require('lodash'),
 
 
 exports.index = function(req, res) {
-  strava.athlete.listActivities({per_page:100}, function( err, payload ) {
+  strava.athlete.listActivities({per_page:100, access_token:req.params.accessToken}, function( err, payload ) {
     if(err) { return handleError(res, err); }
     return res.json(200, payload);
   });

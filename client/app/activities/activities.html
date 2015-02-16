@@ -3,7 +3,6 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-12">
-      <h1 class="page-header">All activities in one:</h1>
       <ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="options" bounds="map.bounds">
           <ui-gmap-polyline
             ng-repeat="p in polylines"
@@ -17,7 +16,6 @@
             icons='p.icons'>
           </ui-gmap-polyline>
       </ui-gmap-google-map>
-      <hr>
     </div>
   </div>
 </div>

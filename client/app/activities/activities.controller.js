@@ -1,12 +1,12 @@
 'use strict';
 
 angular.module('stravamapsApp')
-  .controller('ActivitiesCtrl', function ( $scope, Activities, uiGmapGoogleMapApi ) {
+  .controller('ActivitiesCtrl', function ( $scope, $routeParams, Activities, uiGmapGoogleMapApi ) {
     $scope.polylines = [];
     $scope.map = {};
 
     uiGmapGoogleMapApi.then(function( maps ) {
-      Activities.get( function( activities ) {
+      Activities.get( {accessToken: $routeParams.stravaAccessToken}, function( activities ) {
         var bounds = {
           north: 0,
           east: 0,

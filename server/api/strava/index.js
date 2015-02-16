@@ -5,6 +5,6 @@ var controller = require('./strava.controller');
 
 var router = express.Router();
 
-router.get('/', controller.index);
+router.get('/:accessToken', controller.index);
 
 module.exports = router;
